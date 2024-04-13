@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>github和hexo的简单指令</title>
+      <link href="/2024/04/13/github-he-hexo-de-shi-yong/"/>
+      <url>/2024/04/13/github-he-hexo-de-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="GitHub和hexo的使用"><a href="#GitHub和hexo的使用" class="headerlink" title="GitHub和hexo的使用"></a>GitHub和hexo的使用</h1><ol><li>找到所需的文件夹（项目文件）</li></ol><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">cd</span> /d E:\文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><ol><li>git add .       暂存所有更改</li><li>git commit      提交       git commit -m “详细信息”</li><li>git push     将本地的更改同步到“远方”</li><li>git log    来看提交更改的记录</li><li>git checkout  0de3bb6引入原先版本</li><li>标签功能git tag v 0.1.0 0de3bb6（这一串为commit id的前七位）<br>（在使用了标签之后，git checkout v0.1.0和git checkout 0de3bb6同意义）</li><li>git checkout main返回主函数</li></ol><h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">ssh</span> -T git@github.com <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>1.用于检验当前是否正常连接，成功后再上交代码</p><ol start="2"><li>hexo g  # 生成博客网页文件</li><li>hexo s  # 本地预览博客</li><li>hexo d  # 上传网页文件到github</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>指针</title>
       <link href="/2024/04/12/zhi-zhen/"/>
       <url>/2024/04/12/zhi-zhen/</url>
