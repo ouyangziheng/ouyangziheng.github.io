@@ -2,16 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ouyangziheng.github.io/2024/04/13/github-he-hexo-de-shi-yong/</loc>
-    
-    <lastmod>2024-04-13T14:54:32.182Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ouyangziheng.github.io/2024/04/12/zhi-zhen/</loc>
     
-    <lastmod>2024-04-13T12:23:04.986Z</lastmod>
+    <lastmod>2024-04-13T15:52:52.899Z</lastmod>
     
   </url>
   
@@ -33,6 +26,13 @@
     <loc>http://ouyangziheng.github.io/about/index.html</loc>
     
     <lastmod>2024-04-13T05:56:36.364Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ouyangziheng.github.io/2024/04/13/hello-world/</loc>
+    
+    <lastmod>2024-04-13T04:35:57.023Z</lastmod>
     
   </url>
   

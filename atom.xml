@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ouyangziheng.github.io/"/>
-  <updated>2024-04-13T14:54:32.182Z</updated>
+  <updated>2024-04-13T04:35:57.023Z</updated>
   <id>http://ouyangziheng.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>github和hexo的简单指令</title>
-    <link href="http://ouyangziheng.github.io/2024/04/13/github-he-hexo-de-shi-yong/"/>
-    <id>http://ouyangziheng.github.io/2024/04/13/github-he-hexo-de-shi-yong/</id>
-    <published>2024-04-13T14:46:15.685Z</published>
-    <updated>2024-04-13T14:54:32.182Z</updated>
+    <title>Hello World</title>
+    <link href="http://ouyangziheng.github.io/2024/04/13/hello-world/"/>
+    <id>http://ouyangziheng.github.io/2024/04/13/hello-world/</id>
+    <published>2024-04-13T15:53:55.904Z</published>
+    <updated>2024-04-13T04:35:57.023Z</updated>
     
     <summary type="html">
     
@@ -29,16 +29,12 @@
       
         
         
-          &lt;h1 id=&quot;GitHub和hexo的使用&quot;&gt;&lt;a href=&quot;#GitHub和hexo的使用&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
         
       
     
     </summary>
     
-      <category term="工具" scheme="http://ouyangziheng.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="工具使用" scheme="http://ouyangziheng.github.io/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
@@ -47,7 +43,7 @@
     <link href="http://ouyangziheng.github.io/2024/04/12/zhi-zhen/"/>
     <id>http://ouyangziheng.github.io/2024/04/12/zhi-zhen/</id>
     <published>2024-04-12T07:27:31.000Z</published>
-    <updated>2024-04-13T12:23:04.986Z</updated>
+    <updated>2024-04-13T15:52:52.899Z</updated>
     
     <summary type="html">
     
