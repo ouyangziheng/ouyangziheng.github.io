@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ouyangziheng.github.io/"/>
-  <updated>2024-04-13T04:35:57.023Z</updated>
+  <updated>2024-04-13T12:23:04.986Z</updated>
   <id>http://ouyangziheng.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://ouyangziheng.github.io/2024/04/13/hello-world/"/>
-    <id>http://ouyangziheng.github.io/2024/04/13/hello-world/</id>
-    <published>2024-04-13T04:35:57.023Z</published>
-    <updated>2024-04-13T04:35:57.023Z</updated>
+    <title>指针</title>
+    <link href="http://ouyangziheng.github.io/2024/04/12/zhi-zhen/"/>
+    <id>http://ouyangziheng.github.io/2024/04/12/zhi-zhen/</id>
+    <published>2024-04-12T07:27:31.000Z</published>
+    <updated>2024-04-13T12:23:04.986Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,16 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h1 id=&quot;指针&quot;&gt;&lt;a href=&quot;#指针&quot; class=&quot;headerlink&quot; title=&quot;指针&quot;&gt;&lt;/a&gt;指针&lt;/h1&gt;&lt;h2 id=&quot;指针类型的运算&quot;&gt;&lt;a href=&quot;#指针类型的运算&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
+      <category term="c++" scheme="http://ouyangziheng.github.io/categories/c/"/>
+    
+    
+      <category term="编程" scheme="http://ouyangziheng.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
