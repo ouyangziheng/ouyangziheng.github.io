@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ouyangziheng.github.io/"/>
-  <updated>2024-04-16T16:40:35.443Z</updated>
+  <updated>2024-04-17T13:28:34.215Z</updated>
   <id>http://ouyangziheng.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高斯公式、格林公式、斯托克斯公式</title>
+    <link href="http://ouyangziheng.github.io/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/"/>
+    <id>http://ouyangziheng.github.io/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/</id>
+    <published>2024-04-17T13:40:31.000Z</published>
+    <updated>2024-04-17T13:28:34.215Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;高斯公式、格林公式、斯托克斯公式&quot;&gt;&lt;a href=&quot;#高斯公式、格林公式、斯托克斯公式&quot; class=&quot;headerlink&quot; title=&quot;高斯公式、格林公式、斯托克斯公式&quot;&gt;&lt;/a&gt;高斯公式、格林公式、斯托克斯公式&lt;/h1&gt;&lt;p&gt;$$&lt;br&gt;F =
+        
+      
+    
+    </summary>
+    
+      <category term="数学基础" scheme="http://ouyangziheng.github.io/categories/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="数学与物理公式关联" scheme="http://ouyangziheng.github.io/tags/%E6%95%B0%E5%AD%A6%E4%B8%8E%E7%89%A9%E7%90%86%E5%85%AC%E5%BC%8F%E5%85%B3%E8%81%94/"/>
+    
+  </entry>
   
   <entry>
     <title>二分查找细节实现</title>

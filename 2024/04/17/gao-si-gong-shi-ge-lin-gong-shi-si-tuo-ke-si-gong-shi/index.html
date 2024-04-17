@@ -4,13 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="二分查找细节实现, 欧阳子恒学习笔记">
+    <meta name="keywords" content="高斯公式、格林公式、斯托克斯公式, 欧阳子恒学习笔记">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="
-首先引入数组颜色的概念，定义蓝色和红色为查找的边界条件，两种颜色对应属性相反。问题转化为寻找蓝色和红色的边界，根据题目写出函数isBlue
-对于查找问题，先假定查找对象的数组为灰色数组，左指针指向数组的的-1个元素，将满足左条件的元素标记">
+    <meta name="description" content="高斯公式、格林公式、斯托克斯公式$$F = (P,Q,R)$$
+
+nabla算子
+
+$$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>二分查找细节实现 | 朝花夕拾</title>
+    <title>高斯公式、格林公式、斯托克斯公式 | 朝花夕拾</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -331,13 +333,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        二分查找细节实现
+                        高斯公式、格林公式、斯托克斯公式
                     </div>
                 </div>
             </div>
@@ -448,8 +450,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/编程，算法/" target="_blank">
-                            <span class="chip bg-color">编程，算法</span>
+                        <a href="/tags/数学与物理公式关联/" target="_blank">
+                            <span class="chip bg-color">数学与物理公式关联</span>
                         </a>
                         
                     </div>
@@ -460,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/算法/" class="post-category" target="_blank">
-                            算法
+                        <a href="/categories/数学基础/" class="post-category" target="_blank">
+                            数学基础
                         </a>
                         
                     </div>
@@ -486,14 +488,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    351
+                    591
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -509,29 +511,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ol>
-<li>首先引入数组颜色的概念，定义蓝色和红色为查找的边界条件，两种颜色对应属性相反。问题转化为寻找蓝色和红色的边界，根据题目写出函数isBlue</li>
-<li>对于查找问题，先假定查找对象的数组为灰色数组，左指针指向数组的的-1个元素，将满足左条件的元素标记为蓝色；同时，右指针right指向N+1(N为数组元素个数)，满足右条件的数组标记为红色。找-1和N+1是为了设置一个初始的虚拟颜色，不存在颜色的正误判断，从而避免对0和N-1元的颜色讨论，也同时避免了left + 1 = right而直接退出循环的错误</li>
-<li>所以只需要判断二分点对应的颜色，就可以得到红蓝的边界，在确定二分点之后，可以得出   从二分点颜色到颜色对应边界的区域均为该种颜色</li>
-<li>为严格得到每一个区域的颜色，设置循环停止条件为 left+1 = right 之后，会有0到left为蓝色区域，right到N为红色区域</li>
-<li>伪代码如下</li>
-</ol>
-<pre class="line-numbers language-cpp"><code class="language-cpp">left <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span>  right <span class="token operator">=</span> N <span class="token operator">+</span> <span class="token number">1</span>
-
-<span class="token keyword">while</span> <span class="token punctuation">(</span>left<span class="token operator">+</span><span class="token number">1</span> <span class="token operator">!=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span> 
-
-        <span class="token keyword">if</span> <span class="token function">isBlue</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span>
-                left <span class="token operator">=</span> mid
-        <span class="token keyword">else</span> 
-                righr <span class="token operator">=</span> mid
-
-        根据实际情况返回left <span class="token operator">or</span> right
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="高斯公式、格林公式、斯托克斯公式"><a href="#高斯公式、格林公式、斯托克斯公式" class="headerlink" title="高斯公式、格林公式、斯托克斯公式"></a>高斯公式、格林公式、斯托克斯公式</h1><p>$$<br>F = (P,Q,R)<br>$$</p>
 <ol>
-<li>时间复杂度为O(log n)</li>
-<li>例子，LeetCode2529</li>
+<li>nabla算子</li>
 </ol>
+<p>$$<br>\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partial y} \mathbf{j} + \frac{\partial }{\partial z} \mathbf{k}<br>$$</p>
+<ol>
+<li>梯度概念, 将nabla算子作用于函数，得到梯度，梯度是函数下降最快的路径。梯度将数量场转化为向量场</li>
+</ol>
+<p>$$<br>grad( f )= \nabla f = \frac{\partial f}{\partial x} \mathbf{i} + \frac{\partial f}{\partial y} \mathbf{j} + \frac{\partial f}{\partial z} \mathbf{k}<br>$$</p>
+<ol>
+<li>散度概念，散度描述了一个点流入和流出物理量的程度</li>
+</ol>
+<p>$$<br>\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}</p>
+<p>$$</p>
+<ol>
+<li>旋度，旋度描述了向量场旋转(旋涡)的强度和方向</li>
+</ol>
+<p>$$<br>\nabla \times \mathbf{F} = \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \<br>F_x &amp; F_y &amp; F_z<br>\end{vmatrix}<br>$$</p>
+<ol>
+<li>散度和旋度的物理描述可以类比于向量的点成和叉乘，点成描述两个向量共线的程度，而叉乘表述出两个向量垂直的程度</li>
+<li>环量</li>
+</ol>
+<p>$$<br>\Gamma = \oint_C \mathbf{F} \cdot d\mathbf{r} =\oint_C\ Pdx +Qdy +Rdz<br>$$</p>
+<ol>
+<li><p>高斯公式—理解为流过边界的通量 = 内部所有散度的贡献   可以把散度理解为通量的体密度，当选定某个圆球域，通过该域的有电场，当该原球域的r→0，得到某个点的散度</p>
+<p> $$<br> \oiint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_V (\nabla \cdot \mathbf{F}) \,dV</p>
+<p> $$</p>
+<ol>
+<li>用电荷来理解，划定一个电场域，正电荷只会流出电通量，而负电荷只会吸收电通量，因此，这个场中每个电荷的散度累计为整个划定电场域边界的电通量</li>
+</ol>
+</li>
+<li><p>斯托克斯公式—理解为围绕边界的环量 = 曲面上旋度的的贡献   可以把旋度理解为环量的面密度</p>
+<p> 给定闭曲线环，将环量理解为场沿着这个闭曲线环的做功(即是曲线积分)</p>
+<p> 就三维而言，做功可以看成是三个二维的累加，将某个闭矩形域投射到三个维度，计算每个分量所做的功的累加</p>
+<p> 当曲线环收缩到一个点，即为某点的旋度。而在二维中只考虑xoy平面，原公式退化为格林公式</p>
+</li>
+</ol>
+<p>$$<br>\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}<br>$$</p>
+<p>$$<br>d\mathbf{S} = (cosxdydz, cosydxdz,coszdxdy) = icosx+jcosy+kcosz<br>$$</p>
 
             </div>
             <hr />
@@ -690,9 +708,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《二分查找细节实现》
+                    《高斯公式、格林公式、斯托克斯公式》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2024/04/17/er-fen-cha-zhao/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 欧阳子恒
             </a> 采用
@@ -733,7 +751,7 @@
         repo: 'ouyangziheng.github.io',
         owner: 'ouyangziheng',
         admin: "ouyangziheng",
-        id: '2024/04/17/er-fen-cha-zhao/',
+        id: '2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1016,9 +1034,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/">
                     <div class="card-image">
@@ -1040,9 +1059,9 @@ $$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2024-04-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-04-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1055,6 +1074,7 @@ $$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1070,7 +1090,7 @@ $$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2024/04/17/er-fen-cha-zhao/">
@@ -1106,7 +1126,6 @@ $$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
