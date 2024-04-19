@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>高斯公式、格林公式、斯托克斯公式</title>
+      <title>概率论思考</title>
+      <link href="/2024/04/19/gai-lu-lun-si-kao/"/>
+      <url>/2024/04/19/gai-lu-lun-si-kao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="概率论思考"><a href="#概率论思考" class="headerlink" title="概率论思考"></a>概率论思考</h1><ol><li>对于随机变量，其分布函数需要满足右连续性。特别的，对于连续随机变量，其分布函数需要满足连续性。</li><li>对连续随机变量，概率密度函数求分布函数时使用，x = 左边界时分布函数的值 = 0，可得到系数，使用连续性，可得到后续范围内的系数</li><li>对于均匀分布x，令y  = f( x ) 可以得到y的分布函数为f的反函数，用这种方式，可以生成一组满足符合正态分布的随机数</li><li>证明概率论不等式时常针对于积分范围放缩，证明极限问题时使用概率密度函数的收敛性。例子如下，为解决该问题，将1/y 放缩为1/x。同样原理，在证明chebyshev不等式时同样采取这种方式</li></ol><p>$$<br>\lim_{x \to \infty}<br>\int_{x}^{+\infty}  \frac{f(y)}{y}dy = 0<br>$$</p><ol start="5"><li>x可以表示X的一个具体的取值，在确定具体参数范围的时候，可以将x当成一个相对固定的量，从而确定其他变量的取值范围，在求类似于Z = X + Y问题时尤其常用，可以将X + Y &lt; z当成一个约束条件，用线性规划的基本理论，找到变量的范围，在图中画出变量的取值，求二重积分。由于z可以被当成定值，通过换元，可以将变量区域换成矩形区域，从而利用矩形区域的优良性质。当然，此类问题使用换元法，带入雅可比行列式，计算更为便捷，但仍应注意积分范围问题。</li><li>若有dx,dy，相当于将dx、dy内部的x和y变成定元</li><li>若有(X1,X2…Xn)和(Y1,Y2…Yn)相互独立，则h(X1,X2…Xn)和g(Y1,2…Y2n)相互独立，从微分的角度看，两者不相关，可以分离</li></ol><p>$$<br>\iint h(x_1,x_2\dots x_n)g(y_1,y_2\dots y_n)dx_1dx_2\dots dx_ndy_1dy_2\dots dy_n = \int h(x_1,x_2\dots x_n)dx_1dx_2\dots dx_n \int g(y_1,y_2\dots y_n)dy_1dy_2\dots dy_n<br>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学思考 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>三大公式</title>
       <link href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/"/>
       <url>/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/</url>
       
@@ -13,14 +38,14 @@
       
       <categories>
           
-          <category> 数学基础 </category>
+          <category> 数学 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 数学与物理公式关联 </tag>
+            <tag> 数学思考 </tag>
             
         </tags>
       
