@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>高级语言程序设计大作业实验报告</title>
+      <link href="/2024/04/24/gao-ji-yu-yan-cheng-xu-she-ji-da-zuo-ye-shi-yan-bao-gao/"/>
+      <url>/2024/04/24/gao-ji-yu-yan-cheng-xu-she-ji-da-zuo-ye-shi-yan-bao-gao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="高级语言程序设计大作业实验报告"><a href="#高级语言程序设计大作业实验报告" class="headerlink" title="高级语言程序设计大作业实验报告"></a>高级语言程序设计大作业实验报告</h1><h2 id="一-作业题目"><a href="#一-作业题目" class="headerlink" title="一. 作业题目"></a>一. 作业题目</h2><p>基于qt制作的平面2d小游戏 Genshin_Pursuit</p><h2 id="二-开发软件"><a href="#二-开发软件" class="headerlink" title="二. 开发软件"></a>二. 开发软件</h2><p>QT5.14.2 + vscode</p><h2 id="三-课题要求"><a href="#三-课题要求" class="headerlink" title="三. 课题要求"></a>三. 课题要求</h2><ol><li>面向对象</li><li>单元测试</li><li>模型部分</li><li>验证</li></ol><h2 id="四-主要流程"><a href="#四-主要流程" class="headerlink" title="四. 主要流程"></a>四. 主要流程</h2><h3 id="1-实现思路"><a href="#1-实现思路" class="headerlink" title="1. 实现思路"></a>1. 实现思路</h3><h4 id="a-构建基本场景"><a href="#a-构建基本场景" class="headerlink" title="a. 构建基本场景"></a>a. 构建基本场景</h4><p>首先构建场景之间的框架。游戏中，首先构建StartScene类，来负责游戏的开始界面；然后构建MainScene，负责游戏的主要内容，在MainScene中，构建四个按钮，通过信号和槽的机制，链接四个场景，分别为ChooseScene、MyEquipment、hotel、introduction，对应负责游戏关卡的选择、装备的购买，角色属性的更新，金币的消耗、进入酒店回复血量，消耗金币、游戏介绍；在CHooseScene类内部，设置三个按钮，同样通过信号和槽的机制来连接三个主要的游戏关卡</p><h4 id="b-构建游戏角色"><a href="#b-构建游戏角色" class="headerlink" title="b. 构建游戏角色"></a>b. 构建游戏角色</h4><p>实现MainCharacter类的人物构建，属性的存储，实现arrow类来储存记录角色的输出箭矢，实现了箭矢的移动逻辑和动画</p><h4 id="c-构建游戏怪兽"><a href="#c-构建游戏怪兽" class="headerlink" title="c. 构建游戏怪兽"></a>c. 构建游戏怪兽</h4><p>实现qqren、qqking、syfs三个类，实现各自的移动和怪物本身的技能特效，即丘丘王的冲刺，深渊法师的瞬移，深渊法师的减速</p><h4 id="d-游戏逻辑的实现"><a href="#d-游戏逻辑的实现" class="headerlink" title="d. 游戏逻辑的实现"></a>d. 游戏逻辑的实现</h4><p>在scene01、scene02、scene03之中，实现了角色的攻击逻辑，根据关卡的通过次数，改变怪兽的本身属性，类内实现了怪物的随着时间生成，怪物随着时间释放技能，被攻击后死亡的特点，实现了通过键盘事件类掌控角色的移动</p><h3 id="2-实现方法"><a href="#2-实现方法" class="headerlink" title="2. 实现方法"></a>2. 实现方法</h3><p>a. QT中的信号和槽的机制，在connect函数中使用lamada表达式，即匿名函数<br>b. 实现碰撞逻辑，包括角色射箭和怪兽的碰撞和角色本身和怪兽碰撞<br>c. 计时器的使用，在控制各种技能移动时都使用了移动的逻辑<br>d. 鼠标事件和键盘事件的重写</p><h2 id="五-测试"><a href="#五-测试" class="headerlink" title="五. 测试"></a>五. 测试</h2><p>在本游戏的每个发布阶段都寻找了内测玩家，多次测量相关关卡，包括三个游戏场景，旅馆和装备的逻辑，综合测试得到本游戏的内容稳定</p><h2 id="六-收获"><a href="#六-收获" class="headerlink" title="六. 收获"></a>六. 收获</h2><ol><li>对lamada表达式的掌握，能做到将lamada表达式用于后续cpp的算法题目</li><li>对继承和类之间的深入理解，如何能实现代码的精简化</li><li>熟练掌握了github的使用，加深了对开源的理解，通过重写实现了角色的移动和攻击</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 课程大作业 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>概率论思考</title>
       <link href="/2024/04/19/gai-lu-lun-si-kao/"/>
       <url>/2024/04/19/gai-lu-lun-si-kao/</url>
