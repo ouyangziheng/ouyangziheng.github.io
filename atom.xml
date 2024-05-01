@@ -69,32 +69,6 @@
   </entry>
   
   <entry>
-    <title>概率论思考</title>
-    <link href="http://ouyangziheng.github.io/2024/04/19/gai-lu-lun-si-kao/"/>
-    <id>http://ouyangziheng.github.io/2024/04/19/gai-lu-lun-si-kao/</id>
-    <published>2024-04-19T12:40:31.000Z</published>
-    <updated>2024-04-20T01:14:06.980Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;概率论思考&quot;&gt;&lt;a href=&quot;#概率论思考&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数学" scheme="http://ouyangziheng.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
-    
-    
-      <category term="数学思考" scheme="http://ouyangziheng.github.io/tags/%E6%95%B0%E5%AD%A6%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
     <title>三大公式</title>
     <link href="http://ouyangziheng.github.io/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/"/>
     <id>http://ouyangziheng.github.io/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/</id>
@@ -117,34 +91,6 @@
     
     
       <category term="数学思考" scheme="http://ouyangziheng.github.io/tags/%E6%95%B0%E5%AD%A6%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二分查找细节实现</title>
-    <link href="http://ouyangziheng.github.io/2024/04/17/er-fen-cha-zhao/"/>
-    <id>http://ouyangziheng.github.io/2024/04/17/er-fen-cha-zhao/</id>
-    <published>2024-04-16T16:40:31.000Z</published>
-    <updated>2024-04-16T16:40:35.443Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;首先引入数组颜色的概念，定义蓝色和红色为查找的边界条件，两种颜色对应属性相反。问题转化为寻找蓝色和红色的边界，根据题目写出函数isBlue&lt;/li&gt;
-&lt;li&gt;对于查找问题，先假定查找对象的数组为灰色数组，左指针指向数组的的-1个元素，将满足左条件的元素标记为蓝色
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://ouyangziheng.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="编程，算法" scheme="http://ouyangziheng.github.io/tags/%E7%BC%96%E7%A8%8B%EF%BC%8C%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
