@@ -4,12 +4,18 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="三大积分公式理解, 学习简记">
+    <meta name="keywords" content="学习简记">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="高斯公式、格林公式、斯托克斯公式$$F = (P,Q,R)$$
-1. nabla算子$$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia">
+    <meta name="description" content="
+
+
+配置storydiffusion.md
+
+
+
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +23,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>三大积分公式理解 | 学习简记</title>
+    <title>学习简记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -330,13 +336,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        三大积分公式理解
+                        
                     </div>
                 </div>
             </div>
@@ -446,24 +452,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/数学思考/" target="_blank">
-                            <span class="chip bg-color">数学思考</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/数学/" class="post-category" target="_blank">
-                            数学
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -471,7 +464,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-04-17
+                    2024-06-28
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -485,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    594
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
                 
@@ -508,25 +501,410 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="高斯公式、格林公式、斯托克斯公式"><a href="#高斯公式、格林公式、斯托克斯公式" class="headerlink" title="高斯公式、格林公式、斯托克斯公式"></a>高斯公式、格林公式、斯托克斯公式</h1><p>$$<br>F = (P,Q,R)<br>$$</p>
-<h2 id="1-nabla算子"><a href="#1-nabla算子" class="headerlink" title="1. nabla算子"></a>1. nabla算子</h2><p>$$<br>\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partial y} \mathbf{j} + \frac{\partial }{\partial z} \mathbf{k}<br>$$</p>
-<h2 id="2-梯度概念"><a href="#2-梯度概念" class="headerlink" title="2. 梯度概念"></a>2. 梯度概念</h2><p>将nabla算子作用于函数，得到梯度，梯度是函数下降最快的路径。梯度将数量场转化为向量场</p>
-<p>$$<br>grad( f )= \nabla f = \frac{\partial f}{\partial x} \mathbf{i} + \frac{\partial f}{\partial y} \mathbf{j} + \frac{\partial f}{\partial z} \mathbf{k}<br>$$</p>
-<h2 id="3-散度概念"><a href="#3-散度概念" class="headerlink" title="3. 散度概念"></a>3. 散度概念</h2><p>散度描述了一个点流入和流出物理量的程度</p>
-<p>$$<br>\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}<br>$$</p>
-<h2 id="4-旋度"><a href="#4-旋度" class="headerlink" title="4. 旋度"></a>4. 旋度</h2><p>旋度描述了向量场旋转旋涡的强度和方向</p>
-<p>$$<br>\nabla \times \mathbf{F} = \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \<br>Fx &amp; Fy &amp; Fz<br>\end{vmatrix}<br>$$</p>
-<h2 id="5-环量"><a href="#5-环量" class="headerlink" title="5.环量"></a>5.环量</h2><p>$$<br>\Gamma = \oint_C \mathbf{F} \cdot d\mathbf{r} =\oint_C\ Pdx +Qdy +Rdz<br>$$</p>
-<p>散度和旋度的物理描述可以类比于向量的点成和叉乘，点成描述两个向量共线的程度，而叉乘表述出两个向量垂直的程度</p>
-<h2 id="6-高斯公式"><a href="#6-高斯公式" class="headerlink" title="6. 高斯公式"></a>6. 高斯公式</h2><p>理解为流过边界的通量 = 内部所有散度的贡献<br>可以把散度理解为通量的体密度，当选定某个圆球域，通过该域的有电场，当该原球域的r→0，得到某个点的散度</p>
-<p>$$<br>\iint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_V (\nabla \cdot \mathbf{F}) \,dV<br>$$</p>
-<p>用电荷来理解，划定一个电场域，正电荷只会流出电通量，而负电荷只会吸收电通量，因此，这个场中每个电荷的散度累计为整个划定电场域边界的电通量</p>
-<h2 id="7-斯托克斯公式"><a href="#7-斯托克斯公式" class="headerlink" title="7. 斯托克斯公式"></a>7. 斯托克斯公式</h2><p>理解为围绕边界的环量 = 曲面上旋度的的贡献   可以把旋度理解为环量的面密度</p>
-<p>给定闭曲线环，将环量理解为场沿着这个闭曲线环的做功即是曲线积分</p>
-<p>就三维而言，做功可以看成是三个二维的累加，将某个闭矩形域投射到三个维度，计算每个分量所做的功的累加</p>
-<p>曲线环收缩到一个点，即为某点的旋度。而在二维中只考虑xoy平面，原公式退化为格林公式</p>
-<p>$$<br>\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}<br>$$</p>
-<p>$$<br>d\mathbf{S} = (dydz, dxdz,dxdy)<br>$$</p>
+                <!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+<title>配置storydiffusion.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E9%85%8D%E7%BD%AEstorydiffusion">配置storydiffusion</h1>
+<ol>
+<li>下载源代码到本地</li>
+<li>配置anaconda环境</li>
+</ol>
+<pre class="hljs"><code><div>conda create -<span class="hljs-literal">-name</span> storydiffusion python=<span class="hljs-number">3.10</span>
+conda activate storydiffusion
+pip install <span class="hljs-literal">-U</span> pip
+
+pip install <span class="hljs-literal">-r</span> requirements.txt
+</div></code></pre>
+<ol start="3">
+<li>
+<p>运行Comic_Generation.ipynb程序</p>
+</li>
+<li>
+<p>在运行中可能出现的问题</p>
+<p>a. 网络连接问题</p>
+<p>无法连接huggingface.co</p>
+<p>解决方式: 测试梯子是否链接  通过如下代码测试网络和google服务器之间的链接质量</p>
+<p>输出html则正确</p>
+<pre class="hljs"><code><div>ping google.com
+</div></code></pre>
+<p>b. LFS 文件的下载问题 运行文件时可能出现文件丢失</p>
+<p>解决方式: 将文件下载后配置lfs</p>
+<p>在过程之中注意文件移动的位置</p>
+<p>然后下载使用LFS管理的文件</p>
+<pre class="hljs"><code><div>git lfs install
+git lfs pull
+</div></code></pre>
+<p>c. 由于ssh连接可能断开 可以使用screen来解决</p>
+</li>
+</ol>
+
+</body>
+</html>
 
             </div>
             <hr />
@@ -685,9 +1063,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《三大积分公式理解》
+                    《》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2024/06/28/pei-zhi-storydiffusion-tmp/" property="cc:attributionName"
                rel="cc:attributionURL">
                 欧阳子恒
             </a> 采用
@@ -728,7 +1106,7 @@
         repo: 'ouyangziheng.github.io',
         owner: 'ouyangziheng',
         admin: "ouyangziheng",
-        id: '2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/',
+        id: '2024/06/28/pei-zhi-storydiffusion-tmp/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1011,37 +1389,78 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2024/04/24/gao-ji-yu-yan-cheng-xu-she-ji-da-zuo-ye-shi-yan-bao-gao/">
+                <a href="/2024/06/28/pei-zhi-storydiffusion-tmp/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="高级语言程序设计大作业实验报告">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">高级语言程序设计大作业实验报告</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            高级语言程序设计大作业实验报告一. 作业题目基于qt制作的平面2d小游戏 Genshin_Pursuit
-二. 开发软件QT5.14.2 + vscode
-三. 课题要求
-面向对象
-单元测试
-模型部分
-验证
+                            
 
-四. 主要流程1. 实现思路a
+
+配置storydiffusion.md
+
+
+
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2024-04-24
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-06-28
+                            </span>
+                        <span class="publish-author">
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/06/28/pei-zhi-storydiffusion/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="配置storydiffusion">
+                        
+                        <span class="card-title">配置storydiffusion</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            配置storydiffusion
+下载源代码到本地
+配置anaconda环境
+
+conda create --name storydiffusion python=3.10
+conda activate storydiffusion
+pip
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-06-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1057,59 +1476,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/课程大作业/" target="_blank">
-                        <span class="chip bg-color">课程大作业</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="三大积分公式理解">
-                        
-                        <span class="card-title">三大积分公式理解</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            高斯公式、格林公式、斯托克斯公式$$F = (P,Q,R)$$
-1. nabla算子$$\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partia
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-04-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/数学/" class="post-category" target="_blank">
-                                    数学
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/数学思考/" target="_blank">
-                        <span class="chip bg-color">数学思考</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
                 </div>
@@ -1255,25 +1623,6 @@
     
 
 </main>
-
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 
     <footer class="page-footer bg-color">
