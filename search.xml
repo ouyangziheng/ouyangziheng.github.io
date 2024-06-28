@@ -4,36 +4,11 @@
   
     
     <entry>
-      <title>Torch张量基本语法</title>
-      <link href="/2024/05/01/zhang-liang-yu-fa/"/>
-      <url>/2024/05/01/zhang-liang-yu-fa/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Torch张量语法"><a href="#Torch张量语法" class="headerlink" title="Torch张量语法"></a>Torch张量语法</h1><h2 id="1-使用索引来对张量切片，共用一段内存地址，类似于指针的操作"><a href="#1-使用索引来对张量切片，共用一段内存地址，类似于指针的操作" class="headerlink" title="1. 使用索引来对张量切片，共用一段内存地址，类似于指针的操作"></a>1. 使用索引来对张量切片，共用一段内存地址，类似于指针的操作</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 共用内存的赋值方法</span>point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true"># 不适用共用内存,开辟新内存</span>point <span class="token operator">=</span> points<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clone<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="2-storage方法"><a href="#2-storage方法" class="headerlink" title="2. storage方法"></a>2. storage方法</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 获取张量之间的排列,为连续的内存空间</span>points<span class="token punctuation">.</span>storage<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 获取tensor第一个元素和storage第一个元素间的偏移量</span>points<span class="token punctuation">.</span>storage_offset<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="3-stride方法"><a href="#3-stride方法" class="headerlink" title="3. stride方法"></a>3. stride方法</h2><pre class="line-numbers language-python"><code class="language-python">point <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>point<span class="token punctuation">.</span>stride<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 通过这种方式可以拿到数据的内存之间的偏移地址,返回值为Tuple</span><span class="token comment" spellcheck="true"># stride()会返回第i层+1和第i层之间所经过的内存偏移</span><span class="token comment" spellcheck="true"># 此例子中 为(20, 5, 1)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="4-转置方法"><a href="#4-转置方法" class="headerlink" title="4. 转置方法"></a>4. 转置方法</h2><pre class="line-numbers language-python"><code class="language-python">points <span class="token operator">=</span> points<span class="token punctuation">.</span>t<span class="token punctuation">(</span><span class="token punctuation">)</span>points <span class="token operator">=</span> points<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>dim1<span class="token punctuation">,</span> dim2<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 注意的是 转置后内存地址不变</span><span class="token comment" spellcheck="true"># 实质上,只是反转了stride中的步长,从而改变索引 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="5-数据类型"><a href="#5-数据类型" class="headerlink" title="5. 数据类型"></a>5. 数据类型</h2><pre class="line-numbers language-python"><code class="language-python">torch<span class="token punctuation">.</span>doubletorch<span class="token punctuation">.</span>floattorch<span class="token punctuation">.</span>inttorch<span class="token punctuation">.</span>bool<span class="token comment" spellcheck="true"># 具体方法</span>point<span class="token punctuation">.</span>to <span class="token comment" spellcheck="true">#(对应类型)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="6-索引方法"><a href="#6-索引方法" class="headerlink" title="6. 索引方法"></a>6. 索引方法</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 索引方式同 python 数组 [beg, end, step]</span>points<span class="token punctuation">[</span>none<span class="token punctuation">]</span>   <span class="token comment" spellcheck="true"># 相当于给向量升一个维度</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="6-数组之间的切换"><a href="#6-数组之间的切换" class="headerlink" title="6. 数组之间的切换"></a>6. 数组之间的切换</h2><pre class="line-numbers language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true"># 数组转化为np数组</span>b <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 数组(python数组和np数组均可)转化为torch张量</span>c <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span>b<span class="token punctuation">,</span> device <span class="token operator">=</span> <span class="token string">'cuda:0'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>int<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="7-连续化"><a href="#7-连续化" class="headerlink" title="7. 连续化"></a>7. 连续化</h2><pre class="line-numbers language-python"><code class="language-python">points1 <span class="token operator">=</span> points<span class="token punctuation">.</span>contiguous<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 对于转置得到的数组,连续化操作之后可以得到连续内存空间的新张量</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 深度学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 深度学习 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随机抽样公式</title>
+      <title>随机抽样公式推导</title>
       <link href="/2024/05/01/gai-lu-lun-gong-shi-tui-dao/"/>
       <url>/2024/05/01/gai-lu-lun-gong-shi-tui-dao/</url>
       
-        <content type="html"><![CDATA[<h1 id="概率论公式推导"><a href="#概率论公式推导" class="headerlink" title="概率论公式推导"></a>概率论公式推导</h1><p>$$<br>\frac{(n-1)S^2}{\sigma ^2} \sim\chi^2(n-1)<br>$$</p><p>$$<br>S^2 = \frac{\sum_{i = 1}^{n}(X-\overline{X})^2}{n-1}  =\frac{\sum_{i=1}^{n}X^2-n\overline{X}^2}{n-1}<br>$$</p><p>$$<br>\overline{X} = \frac{\sum_{i=1}^{n}X_i}{n}<br>$$</p><p>$$<br>S^2 =(1- \frac{1}{n})\sum_{i=1}^{b}X_i^2 - 2 \sum_{i=1}^{n}X_iX_j<br>$$</p><p>将$S^2$转换成行列式，求解特征值，对行列式加边，求得</p><p>$$<br>\lambda_1 = \lambda_2 = …=\lambda_{n-1} = 1<br>$$</p><p>$$<br>\lambda_n = 0<br>$$</p><p>故通过正交变换，原式可以转换成n-1个正态分布的累加，即为自由度为n-1的卡方分布</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="随机抽样公式"><a href="#随机抽样公式" class="headerlink" title="随机抽样公式"></a>随机抽样公式</h1><p>$$<br>\frac{(n-1)S^2}{\sigma ^2} \sim\chi^2(n-1)<br>$$</p><p>$$<br>S^2 = \frac{\sum_{i = 1}^{n}(X-\overline{X})^2}{n-1}  =\frac{\sum_{i=1}^{n}X^2-n\overline{X}^2}{n-1}<br>$$</p><p>$$<br>\overline{X} = \frac{\sum_{i=1}^{n}X_i}{n}<br>$$</p><p>$$<br>S^2 =(1- \frac{1}{n})\sum_{i=1}^{b}X_i^2 - 2 \sum_{i=1}^{n}X_iX_j<br>$$</p><p>将$S^2$转换成行列式，求解特征值，对行列式加边，求得</p><p>$$<br>\lambda_1 = \lambda_2 = …=\lambda_{n-1} = 1<br>$$</p><p>$$<br>\lambda_n = 0<br>$$</p><p>故通过正交变换，原式可以转换成n-1个正态分布的累加，即为自由度为n-1的卡方分布</p>]]></content>
       
       
       <categories>
@@ -45,7 +20,7 @@
       
         <tags>
             
-            <tag> 数学思考 </tag>
+            <tag> 概率论 </tag>
             
         </tags>
       
@@ -79,7 +54,7 @@
     
     
     <entry>
-      <title>三大公式</title>
+      <title>三大积分公式理解</title>
       <link href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/"/>
       <url>/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/</url>
       

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>朝花夕拾</title>
+  <title>学习简记</title>
   
-  <subtitle>欧阳子恒学习简记</subtitle>
+  <subtitle>oyzh的学习简记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ouyangziheng.github.io/"/>
-  <updated>2024-05-03T11:44:56.135Z</updated>
+  <updated>2024-06-28T03:37:05.531Z</updated>
   <id>http://ouyangziheng.github.io/</id>
   
   <author>
@@ -17,37 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Torch张量基本语法</title>
-    <link href="http://ouyangziheng.github.io/2024/05/01/zhang-liang-yu-fa/"/>
-    <id>http://ouyangziheng.github.io/2024/05/01/zhang-liang-yu-fa/</id>
-    <published>2024-05-01T00:40:31.000Z</published>
-    <updated>2024-05-03T11:44:56.135Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Torch张量语法&quot;&gt;&lt;a href=&quot;#Torch张量语法&quot; class=&quot;headerlink&quot; title=&quot;Torch张量语法&quot;&gt;&lt;/a&gt;Torch张量语法&lt;/h1&gt;&lt;h2 id=&quot;1-使用索引来对张量切片，共用一段内存地址，类似于指针的操作&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="深度学习" scheme="http://ouyangziheng.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="深度学习" scheme="http://ouyangziheng.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随机抽样公式</title>
+    <title>随机抽样公式推导</title>
     <link href="http://ouyangziheng.github.io/2024/05/01/gai-lu-lun-gong-shi-tui-dao/"/>
     <id>http://ouyangziheng.github.io/2024/05/01/gai-lu-lun-gong-shi-tui-dao/</id>
     <published>2024-05-01T00:40:31.000Z</published>
-    <updated>2024-05-01T00:21:14.419Z</updated>
+    <updated>2024-06-28T03:37:05.531Z</updated>
     
     <summary type="html">
     
@@ -55,7 +29,7 @@
       
         
         
-          &lt;h1 id=&quot;概率论公式推导&quot;&gt;&lt;a href=&quot;#概率论公式推导&quot; class=&quot;headerlink&quot; title=&quot;概率论公式推导&quot;&gt;&lt;/a&gt;概率论公式推导&lt;/h1&gt;&lt;p&gt;$$&lt;br&gt;\frac{(n-1)S^2}{\sigma ^2}
+          &lt;h1 id=&quot;随机抽样公式&quot;&gt;&lt;a href=&quot;#随机抽样公式&quot; class=&quot;headerlink&quot; title=&quot;随机抽样公式&quot;&gt;&lt;/a&gt;随机抽样公式&lt;/h1&gt;&lt;p&gt;$$&lt;br&gt;\frac{(n-1)S^2}{\sigma ^2}
         
       
     
@@ -64,7 +38,7 @@
       <category term="数学" scheme="http://ouyangziheng.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="数学思考" scheme="http://ouyangziheng.github.io/tags/%E6%95%B0%E5%AD%A6%E6%80%9D%E8%80%83/"/>
+      <category term="概率论" scheme="http://ouyangziheng.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
   </entry>
   
@@ -95,11 +69,11 @@
   </entry>
   
   <entry>
-    <title>三大公式</title>
+    <title>三大积分公式理解</title>
     <link href="http://ouyangziheng.github.io/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/"/>
     <id>http://ouyangziheng.github.io/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/</id>
     <published>2024-04-17T13:40:31.000Z</published>
-    <updated>2024-05-01T00:17:45.632Z</updated>
+    <updated>2024-06-28T03:35:43.163Z</updated>
     
     <summary type="html">
     
