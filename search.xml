@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title></title>
+      <title>配置storydiffusion</title>
       <link href="/2024/06/28/pei-zhi-storydiffusion/"/>
       <url>/2024/06/28/pei-zhi-storydiffusion/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="配置storydiffusion"><a href="#配置storydiffusion" class="headerlink" title="配置storydiffusion"></a>配置storydiffusion</h1><h2 id="一-下载源代码到本地"><a href="#一-下载源代码到本地" class="headerlink" title="一. 下载源代码到本地"></a>一. 下载源代码到本地</h2><h2 id="二-配置anaconda环境"><a href="#二-配置anaconda环境" class="headerlink" title="二. 配置anaconda环境"></a>二. 配置anaconda环境</h2><pre class="line-numbers language-powershell"><code class="language-powershell">conda create <span class="token operator">--</span>name storydiffusion python=3<span class="token punctuation">.</span>10conda activate storydiffusionpip install <span class="token operator">-</span>U pippip install <span class="token operator">-</span>r requirements<span class="token punctuation">.</span>txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="三-运行Comic-Generation-ipynb程序"><a href="#三-运行Comic-Generation-ipynb程序" class="headerlink" title="三. 运行Comic_Generation.ipynb程序"></a>三. 运行Comic_Generation.ipynb程序</h2><h2 id="四-在运行中可能出现的问题"><a href="#四-在运行中可能出现的问题" class="headerlink" title="四. 在运行中可能出现的问题"></a>四. 在运行中可能出现的问题</h2><h3 id="1-网络连接问题"><a href="#1-网络连接问题" class="headerlink" title="1. 网络连接问题"></a>1. 网络连接问题</h3><p>无法连接huggingface.co</p><p><img src="https://pic4.zhimg.com/80/v2-61026bf0cecf46da2d7065f935dd63bd.png" alt></p><p>解决方式: 测试梯子是否链接  通过如下代码测试网络和oogle服务器之间的链接质量</p><p>输出html则正确</p><h3 id="2-丢失文件处理"><a href="#2-丢失文件处理" class="headerlink" title="2. 丢失文件处理"></a>2. 丢失文件处理</h3><p>在运行时，可能提示丢失文件 图片如下</p><p><img src="https://pic4.zhimg.com/80/v2-48f897dee5227a7f82e9a5d2f2be6e1b.png" alt></p><p>此时自行在官网下载后移动到指定的文件夹</p><p>下载时，可能会出现如如下问题</p><h4 id="a-lfs的克隆问题"><a href="#a-lfs的克隆问题" class="headerlink" title="a. lfs的克隆问题"></a>a. lfs的克隆问题</h4><p>如果直接使用 </p><pre class="line-numbers language-powershell"><code class="language-powershell">git clone https:<span class="token operator">/</span><span class="token operator">/</span>huggingface<span class="token punctuation">.</span>co<span class="token operator">/</span>SG161222<span class="token operator">/</span>RealVisXL_V4<span class="token punctuation">.</span>0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>会出现如下提示，这事实上只下载了较小文件，而没有下载需要的LFS文件</p><p><img src="https://pic4.zhimg.com/80/v2-25ed580e313f2a7f4bf90e7150bc5a1b.png" alt></p><p>解决方法，使用LFS对应的命令下载</p><pre class="line-numbers language-powershell"><code class="language-powershell">git lfs clone https:<span class="token operator">/</span><span class="token operator">/</span>huggingface<span class="token punctuation">.</span>co<span class="token operator">/</span>SG161222<span class="token operator">/</span>RealVisXL_V4<span class="token punctuation">.</span>0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>显示如下，此时等待下载即可</p><p><img src="https://pic4.zhimg.com/80/v2-7a5b0cc6bc131c8a49440ccb81b72e41.png" alt></p><p>然后 将文件移动到缺失位置</p><p>最后下载使用LFS管理的文件</p><pre class="line-numbers language-powershell"><code class="language-powershell">git lfs installgit lfs pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="b-ssh连接可能断开"><a href="#b-ssh连接可能断开" class="headerlink" title="b. ssh连接可能断开"></a>b. ssh连接可能断开</h3><p>可以使用screen来解决</p>]]></content>
       
       
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
       
     </entry>
     
