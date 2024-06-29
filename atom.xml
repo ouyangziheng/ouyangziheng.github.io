@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ouyangziheng.github.io/"/>
-  <updated>2024-06-28T14:57:32.188Z</updated>
+  <updated>2024-06-29T11:52:58.617Z</updated>
   <id>http://ouyangziheng.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>配置storydiffusion</title>
+    <title></title>
     <link href="http://ouyangziheng.github.io/2024/06/28/pei-zhi-storydiffusion/"/>
     <id>http://ouyangziheng.github.io/2024/06/28/pei-zhi-storydiffusion/</id>
-    <published>2024-06-28T13:40:31.000Z</published>
-    <updated>2024-06-28T14:57:32.188Z</updated>
+    <published>2024-06-28T13:46:03.415Z</published>
+    <updated>2024-06-29T11:52:58.617Z</updated>
     
     <summary type="html">
     
@@ -29,16 +29,13 @@
       
         
         
-          &lt;h1 id=&quot;配置storydiffusion&quot;&gt;&lt;a href=&quot;#配置storydiffusion&quot; class=&quot;headerlink&quot; title=&quot;配置storydiffusion&quot;&gt;&lt;/a&gt;配置storydiffusion&lt;/h1&gt;&lt;h2
+          &lt;p&gt;#! &lt;a href=&quot;https://zhuanlan.zhihu.com/p/706053271&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://zhuanlan.zhihu.com/p/706053271&lt;/a&gt;&lt;/p&gt;
+&lt;h1
         
       
     
     </summary>
     
-      <category term="编程" scheme="http://ouyangziheng.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="深度学习" scheme="http://ouyangziheng.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
