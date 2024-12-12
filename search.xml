@@ -4,86 +4,23 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2024/06/28/pei-zhi-storydiffusion/"/>
-      <url>/2024/06/28/pei-zhi-storydiffusion/</url>
+      <title>B-LoRA</title>
+      <link href="/2024/10/26/b-lora/"/>
+      <url>/2024/10/26/b-lora/</url>
       
-        <content type="html"><![CDATA[<p>#! <a href="https://zhuanlan.zhihu.com/p/706053271" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/706053271</a></p><h1 id="配置storydiffusion"><a href="#配置storydiffusion" class="headerlink" title="配置storydiffusion"></a>配置storydiffusion</h1><h2 id="一-下载源代码到本地"><a href="#一-下载源代码到本地" class="headerlink" title="一. 下载源代码到本地"></a>一. 下载源代码到本地</h2><h2 id="二-配置anaconda环境"><a href="#二-配置anaconda环境" class="headerlink" title="二. 配置anaconda环境"></a>二. 配置anaconda环境</h2><pre class="line-numbers language-powershell"><code class="language-powershell">conda create <span class="token operator">--</span>name storydiffusion python=3<span class="token punctuation">.</span>10conda activate storydiffusionpip install <span class="token operator">-</span>U pippip install <span class="token operator">-</span>r requirements<span class="token punctuation">.</span>txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="三-运行Comic-Generation-ipynb程序"><a href="#三-运行Comic-Generation-ipynb程序" class="headerlink" title="三. 运行Comic_Generation.ipynb程序"></a>三. 运行Comic_Generation.ipynb程序</h2><h2 id="四-在运行中可能出现的问题"><a href="#四-在运行中可能出现的问题" class="headerlink" title="四. 在运行中可能出现的问题"></a>四. 在运行中可能出现的问题</h2><h3 id="1-网络连接问题"><a href="#1-网络连接问题" class="headerlink" title="1. 网络连接问题"></a>1. 网络连接问题</h3><p>无法连接huggingface.co</p><p><img src="https://pic4.zhimg.com/80/v2-61026bf0cecf46da2d7065f935dd63bd.png" alt></p><p>解决方式: 测试梯子是否链接  通过如下代码测试网络和oogle服务器之间的链接质量</p><p>输出html则正确</p><h3 id="2-丢失文件处理"><a href="#2-丢失文件处理" class="headerlink" title="2. 丢失文件处理"></a>2. 丢失文件处理</h3><p>在运行时，可能提示丢失文件 图片如下</p><p><img src="https://pic4.zhimg.com/80/v2-48f897dee5227a7f82e9a5d2f2be6e1b.png" alt></p><p>此时自行在官网下载后移动到指定的文件夹</p><p>下载时，可能会出现如如下问题</p><h4 id="a-lfs的克隆问题"><a href="#a-lfs的克隆问题" class="headerlink" title="a. lfs的克隆问题"></a>a. lfs的克隆问题</h4><p>如果直接使用 </p><pre class="line-numbers language-powershell"><code class="language-powershell">git clone https:<span class="token operator">/</span><span class="token operator">/</span>huggingface<span class="token punctuation">.</span>co<span class="token operator">/</span>SG161222<span class="token operator">/</span>RealVisXL_V4<span class="token punctuation">.</span>0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>会出现如下提示，这事实上只下载了较小文件，而没有下载需要的LFS文件</p><p><img src="https://pic4.zhimg.com/80/v2-25ed580e313f2a7f4bf90e7150bc5a1b.png" alt></p><p>解决方法，使用LFS对应的命令下载</p><pre class="line-numbers language-powershell"><code class="language-powershell">git lfs clone https:<span class="token operator">/</span><span class="token operator">/</span>huggingface<span class="token punctuation">.</span>co<span class="token operator">/</span>SG161222<span class="token operator">/</span>RealVisXL_V4<span class="token punctuation">.</span>0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>显示如下，此时等待下载即可</p><p><img src="https://pic4.zhimg.com/80/v2-7a5b0cc6bc131c8a49440ccb81b72e41.png" alt></p><p>然后 将文件移动到缺失位置</p><p>最后下载使用LFS管理的文件</p><pre class="line-numbers language-powershell"><code class="language-powershell">git lfs installgit lfs pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="b-ssh连接可能断开"><a href="#b-ssh连接可能断开" class="headerlink" title="b. ssh连接可能断开"></a>b. ssh连接可能断开</h4><p>可以使用screen来解决</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>随机抽样公式推导</title>
-      <link href="/2024/05/01/gai-lu-lun-gong-shi-tui-dao/"/>
-      <url>/2024/05/01/gai-lu-lun-gong-shi-tui-dao/</url>
-      
-        <content type="html"><![CDATA[<h1 id="随机抽样公式"><a href="#随机抽样公式" class="headerlink" title="随机抽样公式"></a>随机抽样公式</h1><p>$$<br>\frac{(n-1)S^2}{\sigma ^2} \sim\chi^2(n-1)<br>$$</p><p>$$<br>S^2 = \frac{\sum_{i = 1}^{n}(X-\overline{X})^2}{n-1}  =\frac{\sum_{i=1}^{n}X^2-n\overline{X}^2}{n-1}<br>$$</p><p>$$<br>\overline{X} = \frac{\sum_{i=1}^{n}X_i}{n}<br>$$</p><p>$$<br>S^2 =(1- \frac{1}{n})\sum_{i=1}^{b}X_i^2 - 2 \sum_{i=1}^{n}X_iX_j<br>$$</p><p>将$S^2$转换成行列式，求解特征值，对行列式加边，求得</p><p>$$<br>\lambda_1 = \lambda_2 = …=\lambda_{n-1} = 1<br>$$</p><p>$$<br>\lambda_n = 0<br>$$</p><p>故通过正交变换，原式可以转换成n-1个正态分布的累加，即为自由度为n-1的卡方分布</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="B-lora"><a href="#B-lora" class="headerlink" title="B-lora"></a>B-lora</h1><p>Title: Implicit Style-Content Separation using B-LoRA</p><p>概括: 观察attntion模块，本质上是发现了attention模块具有独立性</p><p>github: <a href="https://github.com/yardenfren1996/B-LoRA">https://github.com/yardenfren1996/B-LoRA</a></p><p>paper: <a href="https://arxiv.org/pdf/2403.14572">https://arxiv.org/pdf/2403.14572</a></p><p>network: <img src="source/00_01.png" alt="image.png"></p><h2 id="method"><a href="#method" class="headerlink" title="method"></a>method</h2><ol><li><p>如下图，SD模型中prompt embedding的描述，文中将不同的prompt分别注入到不同的attention层中，观察某一个层中prompt改变对整体生成图像的影响，再通过CLIP将图像映射到潜空间，计算替换一个prompt出图和prompt本身的余弦相似度→发现第二个和第四个bdflock对应内容的生成，第五个block对应颜色的生成</p><p> <img src="source/00_00.png" alt="image.png"></p></li><li><p>lora-based separation with B_lora</p><ol><li>通过实验发现更改 $∆ W^{4}, ∆W^{5}$的效果最好，其中$∆ W^{4}$ $∆ W^{4}, ∆W^{5}$分别代表内容信息和风格信息</li><li>将这种只需要训练两个模块的叫做B-lora—减少训练参数量</li></ol></li><li><p>B-lora for image stylization</p><ol><li><p>通过输入text-prompt 训练两个矩阵，实现了对style和content的解耦，并且实现了仅加入对应权重实现风格融合</p><p> <img src="source/00_01.png" alt="image.png"></p></li></ol></li></ol>]]></content>
       
       
       <categories>
           
-          <category> 数学 </category>
+          <category> 深度学习 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 概率论 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>高级语言程序设计大作业实验报告</title>
-      <link href="/2024/04/24/gao-ji-yu-yan-cheng-xu-she-ji-da-zuo-ye-shi-yan-bao-gao/"/>
-      <url>/2024/04/24/gao-ji-yu-yan-cheng-xu-she-ji-da-zuo-ye-shi-yan-bao-gao/</url>
-      
-        <content type="html"><![CDATA[<h1 id="高级语言程序设计大作业实验报告"><a href="#高级语言程序设计大作业实验报告" class="headerlink" title="高级语言程序设计大作业实验报告"></a>高级语言程序设计大作业实验报告</h1><h2 id="一-作业题目"><a href="#一-作业题目" class="headerlink" title="一. 作业题目"></a>一. 作业题目</h2><p>基于qt制作的平面2d小游戏 Genshin_Pursuit</p><h2 id="二-开发软件"><a href="#二-开发软件" class="headerlink" title="二. 开发软件"></a>二. 开发软件</h2><p>QT5.14.2 + vscode</p><h2 id="三-课题要求"><a href="#三-课题要求" class="headerlink" title="三. 课题要求"></a>三. 课题要求</h2><ol><li>面向对象</li><li>单元测试</li><li>模型部分</li><li>验证</li></ol><h2 id="四-主要流程"><a href="#四-主要流程" class="headerlink" title="四. 主要流程"></a>四. 主要流程</h2><h3 id="1-实现思路"><a href="#1-实现思路" class="headerlink" title="1. 实现思路"></a>1. 实现思路</h3><h4 id="a-构建基本场景"><a href="#a-构建基本场景" class="headerlink" title="a. 构建基本场景"></a>a. 构建基本场景</h4><p>首先构建场景之间的框架。游戏中，首先构建StartScene类，来负责游戏的开始界面；然后构建MainScene，负责游戏的主要内容，在MainScene中，构建四个按钮，通过信号和槽的机制，链接四个场景，分别为ChooseScene、MyEquipment、hotel、introduction，对应负责游戏关卡的选择、装备的购买，角色属性的更新，金币的消耗、进入酒店回复血量，消耗金币、游戏介绍；在CHooseScene类内部，设置三个按钮，同样通过信号和槽的机制来连接三个主要的游戏关卡</p><h4 id="b-构建游戏角色"><a href="#b-构建游戏角色" class="headerlink" title="b. 构建游戏角色"></a>b. 构建游戏角色</h4><p>实现MainCharacter类的人物构建，属性的存储，实现arrow类来储存记录角色的输出箭矢，实现了箭矢的移动逻辑和动画</p><h4 id="c-构建游戏怪兽"><a href="#c-构建游戏怪兽" class="headerlink" title="c. 构建游戏怪兽"></a>c. 构建游戏怪兽</h4><p>实现qqren、qqking、syfs三个类，实现各自的移动和怪物本身的技能特效，即丘丘王的冲刺，深渊法师的瞬移，深渊法师的减速</p><h4 id="d-游戏逻辑的实现"><a href="#d-游戏逻辑的实现" class="headerlink" title="d. 游戏逻辑的实现"></a>d. 游戏逻辑的实现</h4><p>在scene01、scene02、scene03之中，实现了角色的攻击逻辑，根据关卡的通过次数，改变怪兽的本身属性，类内实现了怪物的随着时间生成，怪物随着时间释放技能，被攻击后死亡的特点，实现了通过键盘事件类掌控角色的移动</p><h3 id="2-实现方法"><a href="#2-实现方法" class="headerlink" title="2. 实现方法"></a>2. 实现方法</h3><p>a. QT中的信号和槽的机制，在connect函数中使用lamada表达式，即匿名函数<br>b. 实现碰撞逻辑，包括角色射箭和怪兽的碰撞和角色本身和怪兽碰撞<br>c. 计时器的使用，在控制各种技能移动时都使用了移动的逻辑<br>d. 鼠标事件和键盘事件的重写</p><h2 id="五-测试"><a href="#五-测试" class="headerlink" title="五. 测试"></a>五. 测试</h2><p>在本游戏的每个发布阶段都寻找了内测玩家，多次测量相关关卡，包括三个游戏场景，旅馆和装备的逻辑，综合测试得到本游戏的内容稳定</p><h2 id="六-收获"><a href="#六-收获" class="headerlink" title="六. 收获"></a>六. 收获</h2><ol><li>对lamada表达式的掌握，能做到将lamada表达式用于后续cpp的算法题目</li><li>对继承和类之间的深入理解，如何能实现代码的精简化</li><li>熟练掌握了github的使用，加深了对开源的理解，通过重写实现了角色的移动和攻击</li></ol><h2 id="七-反思"><a href="#七-反思" class="headerlink" title="七. 反思"></a>七. 反思</h2><p>某些本可以使用类的继承语法的地方没有使用，而是之间复制粘贴，增加了不必要的代码量，影响后期版本迭代</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 课程大作业 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>三大积分公式理解</title>
-      <link href="/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/"/>
-      <url>/2024/04/17/gao-si-gong-shi-ge-lin-gong-shi-si-tuo-ke-si-gong-shi/</url>
-      
-        <content type="html"><![CDATA[<h1 id="高斯公式、格林公式、斯托克斯公式"><a href="#高斯公式、格林公式、斯托克斯公式" class="headerlink" title="高斯公式、格林公式、斯托克斯公式"></a>高斯公式、格林公式、斯托克斯公式</h1><p>$$<br>F = (P,Q,R)<br>$$</p><h2 id="1-nabla算子"><a href="#1-nabla算子" class="headerlink" title="1. nabla算子"></a>1. nabla算子</h2><p>$$<br>\nabla  = \frac{\partial }{\partial x} \mathbf{i} + \frac{\partial }{\partial y} \mathbf{j} + \frac{\partial }{\partial z} \mathbf{k}<br>$$</p><h2 id="2-梯度概念"><a href="#2-梯度概念" class="headerlink" title="2. 梯度概念"></a>2. 梯度概念</h2><p>将nabla算子作用于函数，得到梯度，梯度是函数下降最快的路径。梯度将数量场转化为向量场</p><p>$$<br>grad( f )= \nabla f = \frac{\partial f}{\partial x} \mathbf{i} + \frac{\partial f}{\partial y} \mathbf{j} + \frac{\partial f}{\partial z} \mathbf{k}<br>$$</p><h2 id="3-散度概念"><a href="#3-散度概念" class="headerlink" title="3. 散度概念"></a>3. 散度概念</h2><p>散度描述了一个点流入和流出物理量的程度</p><p>$$<br>\nabla \cdot \mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}<br>$$</p><h2 id="4-旋度"><a href="#4-旋度" class="headerlink" title="4. 旋度"></a>4. 旋度</h2><p>旋度描述了向量场旋转旋涡的强度和方向</p><p>$$<br>\nabla \times \mathbf{F} = \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \<br>Fx &amp; Fy &amp; Fz<br>\end{vmatrix}<br>$$</p><h2 id="5-环量"><a href="#5-环量" class="headerlink" title="5.环量"></a>5.环量</h2><p>$$<br>\Gamma = \oint_C \mathbf{F} \cdot d\mathbf{r} =\oint_C\ Pdx +Qdy +Rdz<br>$$</p><p>散度和旋度的物理描述可以类比于向量的点成和叉乘，点成描述两个向量共线的程度，而叉乘表述出两个向量垂直的程度</p><h2 id="6-高斯公式"><a href="#6-高斯公式" class="headerlink" title="6. 高斯公式"></a>6. 高斯公式</h2><p>理解为流过边界的通量 = 内部所有散度的贡献<br>可以把散度理解为通量的体密度，当选定某个圆球域，通过该域的有电场，当该原球域的r→0，得到某个点的散度</p><p>$$<br>\iint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_V (\nabla \cdot \mathbf{F}) \,dV<br>$$</p><p>用电荷来理解，划定一个电场域，正电荷只会流出电通量，而负电荷只会吸收电通量，因此，这个场中每个电荷的散度累计为整个划定电场域边界的电通量</p><h2 id="7-斯托克斯公式"><a href="#7-斯托克斯公式" class="headerlink" title="7. 斯托克斯公式"></a>7. 斯托克斯公式</h2><p>理解为围绕边界的环量 = 曲面上旋度的的贡献   可以把旋度理解为环量的面密度</p><p>给定闭曲线环，将环量理解为场沿着这个闭曲线环的做功即是曲线积分</p><p>就三维而言，做功可以看成是三个二维的累加，将某个闭矩形域投射到三个维度，计算每个分量所做的功的累加</p><p>曲线环收缩到一个点，即为某点的旋度。而在二维中只考虑xoy平面，原公式退化为格林公式</p><p>$$<br>\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}<br>$$</p><p>$$<br>d\mathbf{S} = (dydz, dxdz,dxdy)<br>$$</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数学 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数学思考 </tag>
+            <tag> 论文阅读 </tag>
             
         </tags>
       
